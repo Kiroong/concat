@@ -1,0 +1,25 @@
+<div class="container" #container>
+  <div class="row my-2">
+    <div class="col-12">
+      <h1>Concatenater</h1>
+      <p>Paste the text on the left, and it concatenates each paragraphs.</p>
+    </div>
+  </div>
+  <div class="row my-2">
+    <div class="col-12 d-flex">
+      <p class="mr-2 mb-0">Words at the end of lines</p>
+      <select #endOption (change)="onInput()">
+        <option value="keeped">are not split into two lines.</option>
+        <option value="hyphened">are split into two lines with hyphen(-) attached.</option>
+      </select>
+    </div>
+  </div>
+  <div class="row h-75 my-2">
+    <div class="col-6 h-100">
+      <textarea class="w-100 h-100" #left (input)="onInput()"></textarea>
+    </div>
+    <div class="col-6 h-100">
+      <textarea class="w-100 h-100" #right disabled></textarea>
+    </div>
+  </div>
+</div>
